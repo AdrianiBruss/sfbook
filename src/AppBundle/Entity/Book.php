@@ -36,6 +36,14 @@ class Book
      */
     private $title;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
+
     /**
      * @var string
      *
@@ -161,25 +169,48 @@ class Book
     }
 
     /**
-     * Set isbm
+     * Set isbn
      *
-     * @param string $isbm
+     * @param string $isbn
      * @return Book
      */
-    public function setIsbm($isbm)
+    public function setIsbn($isbn)
     {
-        $this->isbm = $isbm;
+        $this->isbn = $isbn;
 
         return $this;
     }
 
     /**
-     * Get isbm
+     * Get isbn
      *
      * @return string 
      */
-    public function getIsbm()
+    public function getIsbn()
     {
-        return $this->isbm;
+        return $this->isbn;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Book
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
